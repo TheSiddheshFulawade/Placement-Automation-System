@@ -1,0 +1,78 @@
+<nav class="navbar navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Placement Automation System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% block nav_item_home %}{% endblock %}"
+                            href="{{ url_for('home') }}">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle {% block nav_item_services %}{% endblock %}" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item {% block nav_item_resumebuilder %}{% endblock %}"
+                                    href="{{ url_for('resumebuilder') }}">Resume Builder</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item {% block nav_item_sampleresume %}{% endblock %}"
+                                    href="{{ url_for('sampleresume') }}">Sample Resume</a></li>
+                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link {% block nav_item_companines %}{% endblock %}" aria-current="page"
+                            role="button" href="{{ url_for('companies') }}">Companies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% block nav_item_aboutus %}{% endblock %}" aria-current="page" role="button"
+                            href="{{ url_for('aboutus') }}">About Us</a>
+                    </li>
+
+
+                </ul>
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle {% block nav_item_signin %}{% endblock %} bg-dark me-2"
+                        type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sign In
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item {% block nav_item_studentsignin %}{% endblock %} "
+                                href="{{ url_for('signinstudent') }}">For Students</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item {% block nav_item_recruitersignin %}{% endblock %}"
+                                href="{{ url_for('signinrecruiter') }}">For Recruiters</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle {% block nav_item_signup %}{% endblock %} bg-dark me-2"
+                        type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sign Up
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                        <li><a class="dropdown-item {% block nav_item_studentsignup %}{% endblock %} "
+                                href="{{ url_for('signupstudent') }}">For Students</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item {% block nav_item_recruitersignup %}{% endblock %}"
+                                href="{{ url_for('signuprecruiter') }}">For Recruiters</a></li>
+                    </ul>
+                </div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-danger" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>

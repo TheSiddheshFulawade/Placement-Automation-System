@@ -1,0 +1,197 @@
+{% extends 'base2.html' %}
+
+{% block nav_link_applyforjob %}
+active
+{% endblock %}
+
+{% block POP_UP_Message %}
+You have Applied Successfully.
+{% endblock %}
+
+{% block Reference_POP_UP_Message %}
+{{ url_for('applyforjob') }} 
+{% endblock %}
+
+{% block colors %}
+<style>
+
+    body {
+        background-color: rgb(231, 225, 225);
+    }
+
+    .card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px grey;
+    }
+
+    .btn1 {
+        border: none;
+        outline: none;
+        height: 35px;
+        width: 14%;
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+        font-weight: bold;
+        position: absolute;
+        right: 17px;
+    }
+
+    .btn1:hover {
+        background: white;
+        border: 1px solid;
+        color: black;
+    }
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<section class="form my-5">
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <h1 class="font-weight-bold py-0" style="color:white">Let's Apply for the Job</h1>
+            </div>
+
+            <form class="row g-4  needs-validation" novalidate>
+
+                <h2 class="font-weight-bold py-0"style="color:white"><i class="bi bi-card-list" style="color:white"></i> List of Companies </h2>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#myModal" data-toggle="modal">  <button type="button" class="btn btn1">Apply</button></a>
+                            Amazon<br />
+                        </h4>
+
+                      
+
+                        <div class="col-md-12">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Mumbai, Maharashtra<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Address:</strong>
+                            Powai, 400705<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Qualification Required:</strong>
+                            Btech<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Position:</strong>
+                            Employee<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Salary Range:</strong>
+                            100k<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Job Decription:</strong>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eveniet nihil sequi, enim
+                            voluptate nesciunt veniam ipsum mollitia minus alias error, facilis debitis eum praesentium
+                            saepe totam, deserunt modi? Magni non perferendis hic sit excepturi quia doloremque vel, cum
+                            cumque.<br />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#myModal" class="btn btn1"
+                            role="button" data-toggle="modal">Apply</a>
+                            Microsoft<br />
+                        </h4>
+
+
+                        <div class="col-md-12">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Mumbai, Maharashtra<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Address:</strong>
+                            Powai, 400705<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Qualification Required:</strong>
+                            Btech<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Position:</strong>
+                            Employee<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Salary Range:</strong>
+                            100k<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Job Decription:</strong>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eveniet nihil sequi, enim
+                            voluptate nesciunt veniam ipsum mollitia minus alias error, facilis debitis eum praesentium
+                            saepe totam, deserunt modi? Magni non perferendis hic sit excepturi quia doloremque vel, cum
+                            cumque.<br />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#myModal" class="btn btn1"
+                            role="button" data-toggle="modal">Apply</a>
+                            TCS<br />
+                        </h4>
+
+
+                        <div class="col-md-12">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Mumbai, Maharashtra<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Address:</strong>
+                            Powai, 400705<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Qualification Required:</strong>
+                            Btech<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Position:</strong>
+                            Employee<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Salary Range:</strong>
+                            100k<br />
+                        </div>
+
+                        <div class="col-md-12">
+                            <strong>Job Decription:</strong>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit eveniet nihil sequi, enim
+                            voluptate nesciunt veniam ipsum mollitia minus alias error, facilis debitis eum praesentium
+                            saepe totam, deserunt modi? Magni non perferendis hic sit excepturi quia doloremque vel, cum
+                            cumque.<br />
+                        </div>
+                    </div>
+                </div>
+            </form>
+    </div>
+</section>
+{% endblock %}

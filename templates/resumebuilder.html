@@ -1,0 +1,285 @@
+{% extends 'base2.html' %}
+
+{% block nav_link_resumebuilder %}
+active
+{% endblock %}
+
+{% block colors %}
+<style>
+    body {
+        background-color: rgb(231, 225, 225);
+        
+    }
+
+    .line {
+        border-bottom: 2px solid rgb(211, 209, 209);
+    }
+
+    .btn1 {
+        border: none;
+        outline: none;
+        height: 45px;
+        width: 30%;
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+        font-weight: bold;
+
+
+    }
+
+    .btn1:hover {
+        background: white;
+        border: 1px solid;
+        color: black;
+    }
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <section class="form my-5">
+        <div class="container">
+            <main>
+                <div class="container">
+                    <form class="row g-3 px-4 py-5">
+                        <div class="text-center" style="margin-top: 450py;">
+                            <button type="button" class="btn btn1" onclick="generatePDF()">Download your Resume</button></a>
+                        </div>
+                    </form>
+                </div>
+    </section>
+
+    <div id="invoice">
+        <section class="py-3">
+            <div class="container">
+                <form class="row g-3 px-4 py-3 needs-validation " novalidate>
+
+                    <h3 class="font-weight-bold py-0"><i class="bi bi-person-lines-fill"></i> Personal Information
+                    </h3>
+
+                    <br /><br />
+                    <div class="col-md-4">
+                        <strong>Last name:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-4">
+                        <strong>First name:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-4">
+                        <strong>Middle name:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-6">
+                        <strong>Phone No.</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-6">
+                        <strong>Email:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-6">
+                        <strong>Date of birth:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-6">
+                        <strong>Gender:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-4">
+                        <strong>State:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-4">
+                        <strong>City:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-3">
+                        <strong>Pin Code:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-12">
+                        <strong>Address:</strong>
+                        <br />
+                    </div>
+
+                    <span class="line py-2 my-3"></span>
+
+                    <h3 class="font-weight-bold py-0"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38"
+                            fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z" />
+                            <path
+                                d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z" />
+                        </svg> Education</h3>
+
+                    <div class="col-md-5">
+                        <strong>Graduated in:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-7">
+                        <strong>Name of your Institute:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-5">
+                        <strong>Percentage/CGPA:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-7">
+                        <strong>Year of Graduation:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-5">
+                        <strong>State:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-7">
+                        <strong>City:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-5">
+                        <strong>Qualification Level:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-7">
+                        <strong>Name of your Institute:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-5">
+                        <strong>Percentage/CGPA:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-7">
+                        <strong>Passing Year:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-5">
+                        <strong>State:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-7">
+                        <strong>City:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-5">
+                        <strong>Qualification Level:</strong>
+                        S.S.C. (10th)<br />
+                    </div>
+
+                    <div class="col-md-7">
+                        <strong>Name of your Institute:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-5">
+                        <strong>Percentage/CGPA:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-7">
+                        <strong>Passing Year:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-5">
+                        <strong>State:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-7">
+                        <strong>City:</strong>
+                        <br />
+                    </div>
+
+                    <span class="line py-2 my-3"></span>
+
+                    <h3 class="font-weight-bold py-0"><i class="bi bi-mouse2-fill"></i> Skills</h3>
+
+                    <div class="col-md-12">
+                        <strong>Skill:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-12">
+                        <strong>Achievements:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-12">
+                        <strong>Previous Projects:</strong>
+                        <br />
+                    </div>
+
+                    <div class="col-md-12">
+                        <strong>GitHub URL:</strong>
+                        <br />
+                    </div>
+
+                    <div class="html2pdf_page-break"></div>
+                    <div class="html2pdf_page-break"></div>
+                    <div class="html2pdf_page-break"></div>
+                    <div class="html2pdf_page-break"></div>
+                    <div class="html2pdf_page-break"></div>
+                    <div class="html2pdf_page-break"></div>
+                    <div class="html2pdf_page-break"></div>
+                    <div class="html2pdf_page-break"></div>
+
+                    <div class="col-md-12">
+                        <strong>Hobby:</strong>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque sequi vitae velit
+                        commodi odit vero atque, vel voluptatem quisquam tenetur ullam, laborum aperiam libero
+                        explicabo quos cum fugit! Architecto nostrum facilis nesciunt culpa dolor vel,
+                        blanditiis consequatur quasi. Nobis, labore?<br />
+                    </div>
+
+                    <span class="line py-2 my-3"></span>
+
+                    <h3 class="font-weight-bold py-0"><i class="bi bi-briefcase-fill"></i> Work Experience</h3>
+
+
+                    <div class="col-md-12">
+                        <strong>Decription:</strong>
+                        <br />
+                    </div>
+
+                    <span class="line py-2 my-3"></span>
+                    <p>I hereby declare that the information and details provided in this resume are correct and
+                        inclusive to the best of my knowledge and belief. The information shared in this resume
+                        is correct.</p>
+
+                </form>
+        </section>
+
+
+    </div>
+    </section>
+
+
+    </div>
+
+    {% endblock %}
